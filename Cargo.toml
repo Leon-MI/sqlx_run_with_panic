@@ -1,0 +1,14 @@
+[package]
+name = "sqlx_run_with_panic"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.8.0", features = ["full"] }
+
+[dependencies.sqlx]
+version = "0.5.1"
+default-features = false
+features = ["runtime-tokio-rustls", "offline", "sqlite", "macros", "migrate", "chrono"]
